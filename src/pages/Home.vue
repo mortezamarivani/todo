@@ -3,7 +3,6 @@
         <!-- title component -->
         <Title title="To do List"/> 
 
-
         <!-- panel for search  -->
         <div class="accordion header-Style" id="accordionExample">
             <div class="accordion-item">
@@ -96,32 +95,6 @@
                 </div>
             </div>
         </div>
-       
-        <!-- table -->
-      <!--   <table class="table table-hover">
-
-        <thead>
-            <tr class="header-tbl-Style">
-            <th scope="col">#</th>
-            <th scope="col">Title</th>
-            <th scope="col">Duedate</th>
-            <th scope="col">Periority</th>
-            <th scope="col">Description</th>
-            <th scope="col">...</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="(item,index) in todoList" :key="item.title">
-            <th scope="row"  >{{ index+1 }}</th>
-            <td>{{ item.title}}</td>
-            <td>{{ item.dueDate}}</td>
-            <td>{{ item.priority}}</td>
-            <td>{{ item.description}}</td>
-            <td>...</td>
-            </tr>
-        </tbody>
-        </table>
- -->
 
     </div>
   </template>
@@ -140,8 +113,10 @@
   let showDuedate=ref(true)
   let showDescription=ref(true)
 
-
-  
+    function download(){
+       // window.open(fileUrl);
+       this.$refs.downloadLink.click();
+    }
 
   const router = useRouter();
 
